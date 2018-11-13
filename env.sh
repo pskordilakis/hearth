@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 #
-# Here we define any functions
-# that must allways be loaded
+# Here we define any environmental variables
+# that must always be loaded

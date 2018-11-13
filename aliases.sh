@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 #
 # Here we define any aliases
-# that must allways be loaded
+# that must always be loaded
 
 # Easier navigation: .., ..., ...., ..... and -
 alias ..="cd .."
