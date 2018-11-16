@@ -56,12 +56,19 @@ estia list
 Create a new recipe
 
 ``` sh
-estia create <type> <filename>
+estia create|create-secret <type> <filename>
 ```
 
 Example creating a new environmental variable script.
 ``` sh
 estia create env env-var.sh
+```
+
+or
+
+Example creating a new environmental variable script.
+``` sh
+estia create-secret env env-var.sh
 ```
 
 ### enable
