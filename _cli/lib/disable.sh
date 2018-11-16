@@ -12,11 +12,10 @@
 #   None
 #################################################
 disable_recipe() {
-    if [[ -f $HEARTH_HOME/${types[$1]}/available/$2 ]]; then
-        rm "$HEARTH_HOME/${types[$1]}/enabled/$2"
-    elif [[-f $HEARTH_HOME/${types[$1]}/secret/$2 ]]; then
-        rm "$HEARTH_HOME/${types[$1]}/enabled/$2"
+    local link="$HEARTH_HOME/${types[$1]}/enabled/$2"
+    if [[ -L "$link" ]]; then
+        rm "$link"
     else
-        printf "%s" "recipe does not exist"
+        error "recipe $2 does not exist\n"
     fi
 }
