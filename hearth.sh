@@ -3,18 +3,18 @@
 # Entry point of Hearth
 # Here we will load all aliases, paths and functions
 
-current_dir=$(dirname $0)
+export HEARTH_HOME=$(dirname $0)
 
-source $current_dir/_helpers/include.sh
+source $HEARTH_HOME/_helpers/include.sh
 
-include_if_exists $current_dir/env.sh
-include_symlinks $current_dir/env.d/enabled
+include_if_exists $HEARTH_HOME/env.sh
+include_symlinks $HEARTH_HOME/env.d/enabled
 
-include_if_exists $current_dir/aliases.sh
-include_symlinks $current_dir/aliases.d/enabled
+include_if_exists $HEARTH_HOME/aliases.sh
+include_symlinks $HEARTH_HOME/aliases.d/enabled
 
-include_if_exists $current_dir/paths.sh
-include_symlinks $current_dir/paths.d/enabled
+include_if_exists $HEARTH_HOME/paths.sh
+include_symlinks $HEARTH_HOME/paths.d/enabled
 
-include_if_exists $current_dir/functions.sh
-include_symlinks $current_dir/functions.d/enabled
+include_if_exists $HEARTH_HOME/functions.sh
+include_symlinks $HEARTH_HOME/functions.d/enabled
