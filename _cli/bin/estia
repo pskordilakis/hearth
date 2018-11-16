@@ -23,6 +23,7 @@ declare -A commands
 commands=(
     [edit]=edit
     [create]=create_recipe
+    [create-secret]=create_secret_recipe
     [enable]=enable_recipe
     [disable]=disable_recipe
     [list]=list
