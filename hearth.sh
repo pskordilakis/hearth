@@ -1,4 +1,4 @@
-#!/usr/local/bin
+#!/usr/bin/env bash
 #
 # Entry point of Hearth
 # Here we will load all aliases, paths and functions
@@ -20,4 +20,3 @@ include_symlinks $HEARTH_HOME/paths.d/enabled
 
 include_if_exists $HEARTH_HOME/functions.sh
 include_symlinks $HEARTH_HOME/functions.d/enabled
-echo "hearth loaded"
