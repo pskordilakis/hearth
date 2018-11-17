@@ -1,5 +1,3 @@
-#! /usr/bin/env bash
-#
 #################################################
 # Link a local composer package
 # Globals:
