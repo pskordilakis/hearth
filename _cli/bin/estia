@@ -14,9 +14,9 @@ source $HEARTH_HOME/_cli/lib/disable.sh
 declare -A types
 types=(
     [env]=env.d
-    [path]=path.d
-    [alias]=alias.d
-    [function]=function.d
+    [path]=paths.d
+    [alias]=aliases.d
+    [function]=functions.d
 )
 
 declare -A commands
