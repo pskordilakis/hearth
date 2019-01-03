@@ -11,7 +11,7 @@
 #################################################
 include_if_exists() {
     if [[ -f $1 ]]; then
-        source $1
+        source "$1"
     fi
 }
 
@@ -26,7 +26,7 @@ include_if_exists() {
 #################################################
 include_if_symlink_exists() {
     if [[ -L $1 ]]; then
-        source $1
+        source "$1"
     fi
 }
 
@@ -40,7 +40,7 @@ include_if_symlink_exists() {
 #   None
 #################################################
 include_symlinks() {
-    for filename in $( find $1 -type l ); do
+    for filename in $( find "$1" -type l ); do
         include_if_symlink_exists "$filename"
     done
 }

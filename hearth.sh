@@ -35,25 +35,30 @@ is_zsh() {
     fi
 }
 
+declare HEARTH_HOME
+
 if [[ $(is_bash) = true ]]; then
-    export HEARTH_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+    HEARTH_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 elif [[ $(is_zsh) = true ]]; then
-    export HEARTH_HOME=$(dirname $0)
+    HEARTH_HOME=$(dirname "$0")
 else
     printf "Could not determine current shell\n" 1>&2
     return
 fi
 
-source $HEARTH_HOME/_helpers/include.sh
+export HEARTH_HOME
 
-include_if_exists $HEARTH_HOME/env.sh
-include_symlinks $HEARTH_HOME/env.d/enabled
+# shellcheck source=_helpers/include.sh
+source "$HEARTH_HOME/_helpers/include.sh"
 
-include_if_exists $HEARTH_HOME/aliases.sh
-include_symlinks $HEARTH_HOME/aliases.d/enabled
+include_if_exists "$HEARTH_HOME/env.sh"
+include_symlinks "$HEARTH_HOME/env.d/enabled"
 
-include_if_exists $HEARTH_HOME/paths.sh
-include_symlinks $HEARTH_HOME/paths.d/enabled
+include_if_exists "$HEARTH_HOME/aliases.sh"
+include_symlinks "$HEARTH_HOME/aliases.d/enabled"
 
-include_if_exists $HEARTH_HOME/functions.sh
-include_symlinks $HEARTH_HOME/functions.d/enabled
+include_if_exists "$HEARTH_HOME/paths.sh"
+include_symlinks "$HEARTH_HOME/paths.d/enabled"
+
+include_if_exists "$HEARTH_HOME/functions.sh"
+include_symlinks "$HEARTH_HOME/functions.d/enabled"
