@@ -1,5 +1,3 @@
-#! /usr/bin/env bash
-#
 #################################################
 # Run commands inside homestead through ssh
 # Globals:

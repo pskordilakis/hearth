@@ -1,5 +1,3 @@
-#! /usr/bin/env bash
-#
 # Here we define any aliases
 # that must always be loaded
 
