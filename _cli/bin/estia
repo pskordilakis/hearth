@@ -2,13 +2,26 @@
 #
 # Hearth CLI
 
-source $HEARTH_HOME/_helpers/error.sh
-source $HEARTH_HOME/_cli/lib/usage.sh
-source $HEARTH_HOME/_cli/lib/edit.sh
-source $HEARTH_HOME/_cli/lib/list.sh
-source $HEARTH_HOME/_cli/lib/create.sh
-source $HEARTH_HOME/_cli/lib/enable.sh
-source $HEARTH_HOME/_cli/lib/disable.sh
+# shellcheck source=_helpers/error.sh
+source "$HEARTH_HOME/_helpers/error.sh"
+
+# shellcheck source=_cli/lib/usage.sh
+source "$HEARTH_HOME/_cli/lib/usage.sh"
+
+# shellcheck source=_cli/lib/edit.sh
+source "$HEARTH_HOME/_cli/lib/edit.sh"
+
+# shellcheck source=_cli/lib/list.sh
+source "$HEARTH_HOME/_cli/lib/list.sh"
+
+# shellcheck source=_cli/lib/create.sh
+source "$HEARTH_HOME/_cli/lib/create.sh"
+
+# shellcheck source=_cli/lib/enable.sh
+source "$HEARTH_HOME/_cli/lib/enable.sh"
+
+# shellcheck source=_cli/lib/disable.sh
+source "$HEARTH_HOME/_cli/lib/disable.sh"
 
 
 declare -A types
